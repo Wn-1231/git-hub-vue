@@ -1,7 +1,7 @@
 <template>
   <ul>
     <h1>
-      测试 ci/cd
+      测试成功
     </h1>
     <div>
       列表
