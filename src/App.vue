@@ -1,5 +1,11 @@
 <template>
   <ul>
+    <h1>
+      ci/cd
+    </h1>
+    <div>
+      列表
+    </div>
     <li v-for="(user) in users" :key="user.id">
       {{user.id}}:{{user.name}}
     </li>
@@ -16,7 +22,7 @@ export default {
     }
   },
   mounted(){
-    axios.get('http://localhost:3000/api/users').then(response=>{
+    axios.get('http://47.95.114.11:3000/api/users').then(response=>{
       this.users = response.data;
     });
   }
