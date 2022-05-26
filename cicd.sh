@@ -1,5 +1,5 @@
 #!/bin/bash
-WORK_PATH='/root/wangning/git-hub-action-vue'
+WORK_PATH='/root/wangning/git-hub-vue'
 cd $WORK_PATH
 echo "清理代码"
 git reset --hard origin/master
@@ -11,9 +11,9 @@ npm install
 echo "打包最新代码"
 npm run build
 echo "开始构建镜像"
-docker build -t git-hub-action-vue .
+docker build -t git-hub-vue .
 echo "删除旧容器"
-docker stop git-hub-action-vue-container
-docker rm git-hub-action-vue-container
+docker stop git-hub-vue-container
+docker rm git-hub-vue-container
 echo "启动新容器"
-docker container run -p 80:80 -d --name git-hub-action-vue-container git-hub-action-vue
+docker container run -p 80:80 -d --name git-hub-vue-container git-hub-vue
