@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>
-      测试 CI CD
+      测试 CI CD  xxx
     </h1>
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App" />
