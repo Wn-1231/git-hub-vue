@@ -8,6 +8,8 @@ echo "拉取最新代码"
 git pull origin master
 echo "安装依赖"
 pnpm install
+echo "删除旧 dist"
+rm -rf dist
 echo "打包最新代码"
 pnpm run build
 echo "开始构建镜像"
