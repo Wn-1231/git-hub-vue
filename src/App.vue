@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <hello msg="xxxxxx"/>
     <h1>
       测试 CI CD  xxx
     </h1>
@@ -16,8 +17,12 @@
 
 <script>
 import axios from 'axios';
+import hello from './components/HelloWorld.vue'
 export default {
   name: 'app',
+  components:{
+    hello
+  },
   data() {
     return {
       users: []
