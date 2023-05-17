@@ -1,52 +1,33 @@
 <template>
   <div id="app">
-    <hello msg="xxxxxx" />
-    <h1>测试 CI CD xxx</h1>
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-    <div>列表</div>
-    <li v-for="user in users" :key="user.id">{{ user.id }}:{{ user.name }}</li>
+    <keep-alive>
+      <router-view v-if="this.$route.meta.keepAlive" />
+      <!--这里是会被缓存的组件-->
+    </keep-alive>
+    <router-view v-if="!this.$route.meta.keepAlive" />
   </div>
 </template>
 
 <script>
-import axios from "axios";
-import hello from "./components/HelloWorld.vue";
 export default {
-  name: "app",
-  components: {
-    hello,
-  },
+  name: "App",
   data() {
-    return {
-      users: [],
-    };
-  },
-  mounted() {
-    setTimeout(() => {
-      window.ysf("config", {
-        uid: 11111, // 用户Id
-        success() {
-          // 成功回调
-          window.ysf("open");
-        },
-        error() {},
-      });
-    }, 3000);
-    axios.get("http://47.95.114.11:3000/api/users").then(response => {
-      this.users = response.data;
-    });
+    return {};
   },
 };
 </script>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
