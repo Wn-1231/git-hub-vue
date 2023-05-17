@@ -22,7 +22,16 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: 'service' */ "@/views/Service/index.vue"),
     meta: {
-      title: "自定义页面标题",
+      title: "53 访客端",
+      keepAlive: false,
+    },
+  },
+  {
+    path: "/zh-53-app",
+    component: () =>
+      import(/* webpackChunkName: 'ServiceApp' */ "@/views/ServiceApp/index.vue"),
+    meta: {
+      title: "53 客服端",
       keepAlive: false,
     },
   },
