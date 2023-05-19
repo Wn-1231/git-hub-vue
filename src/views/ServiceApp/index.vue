@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div >53 自定义功能扩展 test</div>
+    <div >53 自定义功能扩展 test + 添加 ng 配置</div>
 
     <br>
 
