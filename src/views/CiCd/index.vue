@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>测试 CI CD wn test</h1>
+    <h1>测试 CI CD wn tes11t</h1>
     <img alt="Vue logo" src="../../assets/logo.png" />
     <div>列表</div>
     <li v-for="user in users" :key="user.id">{{ user.id }}:{{ user.name }}</li>
