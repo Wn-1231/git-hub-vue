@@ -1,5 +1,5 @@
 #!/bin/bash
-WORK_PATH='/root/wangning/git-hub-vue'
+WORK_PATH='/root/git-hub-vue'
 cd $WORK_PATH
 echo "清理代码"
 git reset --hard origin/master
